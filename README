@@ -1,0 +1,15 @@
+PRE-ALPHA CODE: BEWARE
+
+Author: Eric Christiansen
+Contributor: Iljung Sam Kwak
+
+This benchmarks the library at
+
+https://github.com/emchristiansen/mbtree
+
+It compares brute force search to the metric tree technique used in the above library. It measures wall time as well as the number of metric lookups required by each technique. It uses several real datasets from the UC Irvine machine learning database.
+
+Note it runs just one test at a time; modify benchmark.scala to change the test.
+
+
+
