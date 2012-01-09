@@ -14,10 +14,12 @@ scalacOptions ++= Seq(
 "-deprecation"
 )
 
+// TODO: figure out how to depend on a github repository
 //resolvers ++= Seq(
 //"emchristiansen github" at "https://github.com/emchristiansen/mbtree"
 //)
 
+// You must download mbtree and execute "sbt publish-local".
 libraryDependencies ++= Seq(
 "default" %% "mbtree" % "0.1-SNAPSHOT",
 "org.scalatest" %% "scalatest" % "latest.integration",
