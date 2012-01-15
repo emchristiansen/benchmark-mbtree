@@ -19,7 +19,7 @@ object BenchmarkUtil {
     // Ignore empty lines.
     val lines = Resource.fromFile(path).lines().filter(_.size > 0).toList
 
-    val Pattern = """[^ \t\n,]+[0-9\.]+[$ \t\n,]+""".r
+    val Pattern = """(^|[ ,\t\n]+)([0-9\.]+)($|[ ,\t\n]+)""".r
     val data = for (line <- lines) yield {
       val list = for (number <- Pattern.findAllIn(line)) yield number.toDouble
       list.toIndexedSeq
